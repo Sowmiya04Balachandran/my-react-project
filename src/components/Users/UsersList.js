@@ -10,7 +10,7 @@ return (
     <ul>
         {props.users.map((user) =>(
         <li key={user.id}>
-            {user.name} ({user.age} years old)
+            {user.name} ({user.age} years old) {user.college}
         </li>
          ))}
     </ul>

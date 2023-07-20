@@ -8,16 +8,16 @@ function App() {
   const [usersList,setUsersList]=useState([]);
   
   
-  const addUserHandler=(uName,uAge)=>{
+  const addUserHandler=(uName,uAge,uCollege)=>{
     setUsersList((prevUserList)=>{
-      return[...prevUserList,{name:uName,age:uAge ,id:Math.random().toString()}]
+      return[...prevUserList,{name:uName,age:uAge ,college:uCollege,id:Math.random().toString()}]
     });
   }
   return(
-<div>
-  <AddUser onAddUser={addUserHandler}/>
+    <React.Fragment>
+    <AddUser onAddUser={addUserHandler}/>
   <UsersList users={usersList} />
-</div>   
+</React.Fragment>  
   )
 }
 
